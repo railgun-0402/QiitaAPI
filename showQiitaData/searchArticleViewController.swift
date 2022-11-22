@@ -20,7 +20,23 @@ class searchArticleViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    /* TextField以外の部分をタップすると、キーボードを閉じる */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    /* returnすると、キーボードを閉じる */
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /* 検索するボタン押下時処理 */
     @IBAction func searchButton(_ sender: Any) {
+        // 押下時処理
+        
+        // キーボードを閉じる
+        searchTextField.endEditing(true)
     }
 }
