@@ -23,8 +23,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // ↓追加
-        title = "Qiita記事Sample"
+        // タブバーのタイトル
+        title = "Qiita人気記事"
         
         tableView.dataSource = self
     }
