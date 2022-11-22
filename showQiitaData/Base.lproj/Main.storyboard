@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VOD-RA-cbX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ddf-We-wpc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,23 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="eHV-9O-AFq">
-            <objects>
-                <navigationController id="VOD-RA-cbX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yik-gF-dCv">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="upu-dw-HnI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bAZ-vp-Xxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1621" y="77"/>
-        </scene>
-        <!--View Controller-->
+        <!--人気記事-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -35,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Byn-9V-Sep">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="765"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="s5e-wc-7Bs">
@@ -58,18 +42,169 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Byn-9V-Sep" secondAttribute="bottom" id="zH1-E3-X7b"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="人気記事" image="figure.fall" catalog="system" id="0W1-5x-zuu"/>
                     <navigationItem key="navigationItem" id="VeL-L4-COf"/>
                     <connections>
                         <outlet property="tableView" destination="Byn-9V-Sep" id="58j-Vt-qYK"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-662.31884057971024" y="75.669642857142847"/>
+            <point key="canvasLocation" x="-841" y="76"/>
+        </scene>
+        <!--Coming Soon!!-->
+        <scene sceneID="3n2-Pq-VRP">
+            <objects>
+                <viewController id="pPn-3V-DxV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7j-Xn-bFa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cv-cu-x5i">
+                                <rect key="frame" x="143" y="438" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xBi-Xy-U15"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Coming Soon!!" image="key.horizontal.fill" catalog="system" id="Bd0-0s-kh5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Lv-Cv-0Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="378.34821428571428"/>
+        </scene>
+        <!--記事検索-->
+        <scene sceneID="OxD-qg-cBM">
+            <objects>
+                <viewController id="ZJS-kg-bfr" customClass="searchArticleViewController" customModule="showQiitaData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zI2-uk-QUu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qiitaの記事を検索出来ます！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N5-EL-tKN">
+                                <rect key="frame" x="66" y="152" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ndz-qN-mOv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="検索したい記事を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RRf-Ue-Bkt">
+                                <rect key="frame" x="16" y="431" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prv-lt-dlF">
+                                <rect key="frame" x="135" y="516" width="144" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="検索する">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButton:" destination="ZJS-kg-bfr" eventType="touchUpInside" id="6cQ-uI-ELH"/>
+                                    <segue destination="WHs-dh-su5" kind="show" id="GRu-2h-GQv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cbA-aD-940"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Prv-lt-dlF" firstAttribute="leading" secondItem="cbA-aD-940" secondAttribute="leading" constant="135" id="0QG-Tv-SLQ"/>
+                            <constraint firstItem="1N5-EL-tKN" firstAttribute="top" secondItem="cbA-aD-940" secondAttribute="top" constant="104" id="4PA-QY-ljd"/>
+                            <constraint firstItem="Prv-lt-dlF" firstAttribute="centerX" secondItem="RRf-Ue-Bkt" secondAttribute="centerX" id="7HZ-A2-smY"/>
+                            <constraint firstItem="RRf-Ue-Bkt" firstAttribute="centerY" secondItem="zI2-uk-QUu" secondAttribute="centerY" id="E4H-Rf-uc3"/>
+                            <constraint firstItem="cbA-aD-940" firstAttribute="trailing" secondItem="1N5-EL-tKN" secondAttribute="trailing" constant="48" id="L8L-3I-G9I"/>
+                            <constraint firstItem="Prv-lt-dlF" firstAttribute="top" secondItem="RRf-Ue-Bkt" secondAttribute="bottom" constant="51" id="PNL-ej-zPo"/>
+                            <constraint firstItem="cbA-aD-940" firstAttribute="trailing" secondItem="RRf-Ue-Bkt" secondAttribute="trailing" constant="16" id="Usz-Hs-leb"/>
+                            <constraint firstItem="RRf-Ue-Bkt" firstAttribute="leading" secondItem="cbA-aD-940" secondAttribute="leading" constant="16" id="Wcb-2Z-3Je"/>
+                            <constraint firstItem="1N5-EL-tKN" firstAttribute="leading" secondItem="cbA-aD-940" secondAttribute="leading" constant="66" id="kvf-Gh-UlA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="記事検索" image="shareplay" catalog="system" id="qJm-cu-0PL"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="RRf-Ue-Bkt" id="a3p-ce-deB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbl-qH-TuS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="-228.34821428571428"/>
+        </scene>
+        <!--Show Search Article View Controller-->
+        <scene sceneID="lNS-UC-XxI">
+            <objects>
+                <viewController id="WHs-dh-su5" customClass="showSearchArticleViewController" customModule="showQiitaData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zUN-Dq-RF9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="09t-x6-Tbk">
+                                <rect key="frame" x="0.0" y="48" width="414" height="790"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Eaa-Gw-3La">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eaa-Gw-3La" id="2Qb-ur-BRy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ufv-Jy-TDV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="09t-x6-Tbk" firstAttribute="leading" secondItem="ufv-Jy-TDV" secondAttribute="leading" id="EtS-x0-vJm"/>
+                            <constraint firstItem="09t-x6-Tbk" firstAttribute="top" secondItem="ufv-Jy-TDV" secondAttribute="top" id="Gda-cV-f1n"/>
+                            <constraint firstItem="ufv-Jy-TDV" firstAttribute="bottom" secondItem="09t-x6-Tbk" secondAttribute="bottom" id="YtO-d2-kjR"/>
+                            <constraint firstItem="ufv-Jy-TDV" firstAttribute="trailing" secondItem="09t-x6-Tbk" secondAttribute="trailing" id="eXf-xV-E3z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s6Q-Ce-nW8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfY-Pj-ITf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="-228"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Zzz-eH-zli">
+            <objects>
+                <tabBarController id="ddf-We-wpc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P3k-lq-zBK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ace-5s-fuw"/>
+                        <segue destination="ZJS-kg-bfr" kind="relationship" relationship="viewControllers" id="1vJ-xy-qpZ"/>
+                        <segue destination="pPn-3V-DxV" kind="relationship" relationship="viewControllers" id="Drk-tB-nON"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8C-is-wC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="76"/>
         </scene>
     </scenes>
     <resources>
+        <image name="figure.fall" catalog="system" width="128" height="115"/>
+        <image name="key.horizontal.fill" catalog="system" width="128" height="65"/>
+        <image name="shareplay" catalog="system" width="128" height="75"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
